@@ -1,0 +1,220 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  background-color: #181818;
+  color:white;
+}
+.header{
+  background-color: #202020;
+  height: 10vh;
+  padding:1rem  10rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.header .left{
+  margin: auto 0px;
+}
+.header .left h2{
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+.header .left h2 span{
+  text-transform: uppercase;
+  color: #f5c518;
+}
+.header .right{
+  width: 30%;
+}
+.header .right ul{
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .right ul li{
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.header .right ul li:hover{
+  color: rgba(255,255,255, 0.9);
+  transition: 0.3s ease-in-out;
+}
+.search{
+  height: 15vh;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search h2{
+  font-size: 2rem;
+  margin: 0 20px;
+}
+.search .search_bar{
+  width: 20vw;
+  height: 3rem;
+  padding: 15px;
+  background-color: #202020;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px 0 0 20px;
+}
+.search button{
+  height: 3rem;
+  width: 3rem;
+  background-color: #202020;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 0px 20px 20px 0px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.main_body{
+  background-image: linear-gradient(to bottom right, #202020, rgba(0, 0, 0, 0.9));
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+  color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+}
+.trending_movies{
+  margin-bottom: 30px;
+
+}
+.discover_Movies{
+ margin-bottom: 30px;
+}
+.popular_movies{
+  margin-top: 30px;
+}
+.trending_movie_Card,.discover_movie_Card,.popular_movie_Card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.movies_card{
+  margin-top: 2rem;
+  height: 350px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.movies_card:hover img{
+  transform: scale(1.1);
+  transition: 0.5s ease-in;
+}
+.movies_card:hover .movie_card_details{
+  display: block;
+}
+.movies_card h3{
+  color: #f5c518;
+  font-size: 1.5rem;
+}
+.movie_card_details{
+  height: 300px;
+  width: 250px;
+  z-index: 1;
+  position: absolute;
+  background-image: linear-gradient(to bottom right, #202020, rgba(0, 0, 0, 1));
+  left:150px;
+  top:100px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  padding: 20px 10px;
+  display: none;
+}
+.movie_card_details h3{
+  color: #f5c518;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.movie_card_details h2{
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.movie_card_details h2 span{
+  font-weight: bold;
+  color: rgba(245, 197, 24, 0.8);
+}
+.movie_card_details span{
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.movie_card_details span span{
+  font-weight: bold;
+  color: rgba(245, 197, 24, 0.8);
+}
+.movie_card_details h4{
+  margin-bottom: 5px;
+}
+.movie_card_details h4 span{
+  background-color: #f5c518;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 3px;
+  margin-right: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.movie_card_details p{
+  font-size: 0.9rem;
+}
+.movie_card_details p span{
+  font-weight: bold;
+  color: rgba(245, 197, 24, 0.8);
+}
+
+.movies_card img{
+  height: 300px;
+  width: 225px;
+  margin-bottom: 20px;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 5px #000000;
+  background: rgba(0, 0, 0, 0.7);
+}
+::-webkit-scrollbar-thumb{
+  background: rgba(245, 197, 24, 0.8);
+  border-radius: 5px;
+}
+
+.pop-up_container{
+  width: 400px;
+  background: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+.show_popup{
+  visibility: visible;
+  top: 50%;
+}
